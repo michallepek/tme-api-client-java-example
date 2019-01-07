@@ -1,0 +1,10 @@
+.classpath
+.gradle
+.project
+.idea
+bin
+out
+build
+.gradletasknamecache
+gradle-app.setting
+

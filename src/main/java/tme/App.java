@@ -1,12 +1,4 @@
-# tme-api-client-java-example
-
-Simple TME API Client written in Java.
-
-* https://developers.tme.eu/en/
-* https://tme.eu/
-
-```Java
-package example;
+package tme;
 
 import java.net.URL;
 import java.util.Map;
@@ -18,13 +10,14 @@ import java.io.IOException;
  */
 public class App {
 
+    // Token and secret from https://developers.tme.eu
     private static final String token = "<PUT_YOUR_TOKEN>";
     private static final String secret = "<PUT_YOUR_SECRET>";
-    private static final String apiActionUrl = "https://api.tme.eu/Products/GetPrices.json";
+    private static final String apiActionUrl = "https://api.tme.eu/Products/GetPrices.json"; // or .xml
 
     public static void main(String[] args) {
         try {
-            Map<String, String> params = new TreeMap<>();
+            Map<String, String> params = new TreeMap<>(); // Because we needs sorted parameters
             params.put("Token", token);
             params.put("SymbolList[0]", "1N4007-DC");
             params.put("Country", "PL");
@@ -42,8 +35,3 @@ public class App {
     }
 
 }
-```
-
-## License
-
-MIT
